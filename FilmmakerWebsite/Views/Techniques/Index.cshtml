@@ -1,0 +1,54 @@
+﻿@model IEnumerable<FilmmakerWebsite.Models.Technique>
+
+@{
+    ViewData["Title"] = "Technique List";
+}
+
+<h1>Technique List</h1>
+
+<p>
+    <a asp-action="Create">Create New Technique</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Example)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadDate)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Example)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UploadDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TechniqueID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.TechniqueID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TechniqueID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

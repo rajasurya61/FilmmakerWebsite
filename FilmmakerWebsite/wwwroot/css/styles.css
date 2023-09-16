@@ -1,0 +1,22 @@
+﻿/* styles.css */
+
+/* Style for buttons */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Style for headers */
+h1, h2, h3 {
+    color: #333;
+}
+
+

@@ -1,0 +1,51 @@
+﻿@model FilmmakerWebsite.Models.Technique
+
+@{
+    ViewData["Title"] = "Edit Technique";
+}
+
+<h1>Edit Technique</h1>
+
+<h4>Technique</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TechniqueID" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label">Title</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Description</label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Example" class="control-label">Example</label>
+                <input asp-for="Example" class="form-control" />
+                <span asp-validation-for="Example" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UploadDate" class="control-label">Upload Date</label>
+                <input asp-for="UploadDate" class="form-control" />
+                <span asp-validation-for="UploadDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Cancel and Back to Technique List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

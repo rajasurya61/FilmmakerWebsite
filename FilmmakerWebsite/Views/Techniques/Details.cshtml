@@ -1,0 +1,42 @@
+﻿@model FilmmakerWebsite.Models.Technique
+
+@{
+    ViewData["Title"] = "Technique Details";
+}
+
+<h1>Technique Details</h1>
+
+<div>
+    <h4>Technique</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Example)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Example)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UploadDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UploadDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TechniqueID">Edit Technique</a> |
+    <a asp-action="Index">Back to Technique List</a>
+</div>

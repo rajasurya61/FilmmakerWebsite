@@ -1,0 +1,40 @@
+﻿@model IEnumerable<FilmmakerWebsite.Models.Script>
+
+@{
+    ViewData["Title"] = "Script List";
+}
+
+<h1 class="script-heading">Scripts Page</h1>
+
+<p>Script content goes here...</p>
+
+<p>
+    <a asp-action="Create">Create New Script</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Upload Date</th>
+            <th>Author</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                <td>@Html.DisplayFor(modelItem => item.Content)</td>
+                <td>@Html.DisplayFor(modelItem => item.UploadDate)</td>
+                <td>@Html.DisplayFor(modelItem => item.Author)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ScriptID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ScriptID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ScriptID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

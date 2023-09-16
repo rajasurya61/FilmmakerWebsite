@@ -1,0 +1,19 @@
+﻿/* Style headings */
+.script-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style buttons */
+.script-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    .script-button:hover {
+        background-color: #0056b3;
+    }
